@@ -71,9 +71,9 @@
         int                     tagword_arity;
         int                     full_arity;
         // arg_vector is meaningful iff full_arity > tagword_arity.
-        MR_Word                 *arg_vector;
-        // tagword_arity is meaningful iff tagword_arity > 0.
-        MR_Word                 tagword;
+        MR_Word                 *arg_vector = NULL;
+        // tagword is meaningful iff tagword_arity > 0
+        MR_Word                 tagword = 0;
         MR_Word                 direct_arg;
         int                     meta_args;
         int                     i;

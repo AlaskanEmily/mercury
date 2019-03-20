@@ -640,7 +640,7 @@ EXPAND_FUNCTION_NAME(MR_TypeInfo type_info, MR_Word *data_word_ptr,
         // The second is accessing the values of the arguments.
         // For this, we use ao_arg_vector, which should point to the start
         // of the part of the memory cell that stores only arg values.
-        MR_Word                 *ti_arg_vector;
+        MR_Word                 *ti_arg_vector = NULL;
         MR_Word                 *ao_arg_vector;
         MR_Word                 *word_size_arg_ptr;
         MR_Word                 direct_arg;

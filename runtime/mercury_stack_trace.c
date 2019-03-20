@@ -448,8 +448,8 @@ MR_dump_stack_from_layout_clique(FILE *fp, const MR_LabelLayout *label_layout,
     while (level < walked_stack_next) {
         MR_bool             has_higher_order_arg;
         int                 slot;
-        int                 parent;
-        int                 side;
+        int                 parent = -1;
+        int                 side = -1;
 
         rec_first_level = level;
         proc_layout = walked_stack[rec_first_level].ste_proc_layout;
@@ -670,7 +670,7 @@ MR_find_proc_in_proc_table(const MR_ProcTableEntry *proc_table,
 {
     int cur;
     int parent;
-    int side;
+    int side = -1;
 
     // XXX We don't need proc_table_next for anything else.
     if (proc_table_next == 0) {
